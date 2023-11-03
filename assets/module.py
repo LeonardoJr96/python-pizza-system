@@ -52,11 +52,12 @@ def repetir():
     outras(sugar_drink_finished_salgado)
 
 def true_false():
-    a = int(input("finallizar o pedido? (1)Sim (2)Não\n"))
-    if a == 1:
-      return pedidoss == False
-    else:
-      return pedidoss == True
+  global pedidos
+  a = int(input("finallizar o pedido? (1)Sim (2)Não\n"))
+  if a == 1:
+    pedidos = False
+  else:
+    pedidoss = True
 
 def outras(sugar_drink_finished_salgado):
   if sugar_drink_finished_salgado == 1:
