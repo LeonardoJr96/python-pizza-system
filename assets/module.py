@@ -20,7 +20,7 @@ def doces():
   repetir()
 
 def bebidas():
-  tipes_sabor = int(input("digite a bebida que deseja: \n(1)Calabresa \n(2)Portuguesa \n(3)Mussarela  \n(4)Pepperoni\n"))
+  tipes_sabor = int(input("digite a bebida que deseja: \n(1)Coca \n(2)Pepsi \n(3)Guaraná  \n(4)Fanta\n"))
   print(tipes_sabor)
   repetir()
 
