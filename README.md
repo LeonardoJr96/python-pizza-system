@@ -1,2 +1,2 @@
-# python-grud-system
-projeto pessoal utilizando python  trazendo um grud funcional para sistemas de pedidos 
+# Python-Pizza-System
+Este documento descreve um sistema de pedidos em Python, abordando os requisitos, funcionalidades e instruções de uso!
