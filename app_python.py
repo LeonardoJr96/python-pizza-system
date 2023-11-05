@@ -10,4 +10,4 @@ while module.pedidoss() == True:
     module.doces()
   elif tipes == 3:
     module.bebidas()
-print(f'build finished')
+module.fim()

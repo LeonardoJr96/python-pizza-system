@@ -1,5 +1,7 @@
+from assets import options
+
 add = []
-pedido = []
+
 pedidos = True
 
 def pedidoss():
@@ -7,6 +9,8 @@ def pedidoss():
 
 def salgados():
   tipes_sabor = int(input("digite o sabor que deseja: \n(1)Calabresa \n(2)Portuguesa \n(3)Mussarela  \n(4)Pepperoni\n"))
+  print(tipes_sabor)
+  options.sabores_salgados(tipes_sabor)
   adicionais_true_false = int(input("adicionais: (1)Sim (2)Não\n"))
   if adicionais_true_false == 1:
     adicionais()
@@ -15,13 +19,15 @@ def salgados():
     repetir()
 
 def doces():
-  tipes_sabor = int(input("digite o sabor que deseja: \n(1)Prestígio \n(2)Chocolate \n(3)Doce de Leite\n"))
-  print(tipes_sabor)
+  tipes_doce = int(input("digite o sabor que deseja: \n(1)Prestígio \n(2)Chocolate \n(3)Doce de Leite\n"))
+  print(tipes_doce)
+  options.sabores_doces(tipes_doce)
   repetir()
 
 def bebidas():
-  tipes_sabor = int(input("digite a bebida que deseja: \n(1)Coca \n(2)Pepsi \n(3)Guaraná  \n(4)Fanta\n"))
-  print(tipes_sabor)
+  tipes_drinks = int(input("digite a bebida que deseja: \n(1)Coca \n(2)Pepsi \n(3)Guaraná  \n(4)Fanta\n"))
+  print(tipes_drinks)
+  options.sabores_drinks(tipes_drinks)
   repetir()
 
 def select(selected):
@@ -48,7 +54,7 @@ def adicionais():
     add.append(select(selected))
 
 def repetir():
-    sugar_drink_finished_salgado = int(input("Quer pedir mais ou finalizar? (1)Pizzas Doces (2)Bebidas (3)Finalizar\n"))
+    sugar_drink_finished_salgado = int(input("Quer pedir mais ou finalizar? (1)Pizzas Salgadas (2)Pizzas Doces (3)Bebidas (4)Finalizar\n"))
     outras(sugar_drink_finished_salgado)
 
 def true_false():
@@ -61,11 +67,14 @@ def true_false():
 
 def outras(sugar_drink_finished_salgado):
   if sugar_drink_finished_salgado == 1:
-    doces()
-  elif sugar_drink_finished_salgado == 2:
-    bebidas()
-  elif sugar_drink_finished_salgado == 3:
-    true_false()
-  elif sugar_drink_finished_salgado == 4:
     salgados()
+  elif sugar_drink_finished_salgado == 2:
+    doces()
+  elif sugar_drink_finished_salgado == 3:
+    bebidas()
+  elif sugar_drink_finished_salgado == 4:
+    true_false()
 
+def fim():
+  print(f'Adicionais da pizza {add}')
+  print(options.pedido, "Seu pedido")
